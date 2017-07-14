@@ -4,9 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.metaversant</groupId>
     <artifactId>share-site-creators-share</artifactId>
-    <packaging>amp</packaging>
+    <packaging>jar</packaging>
 
-    <name>share-site-creators-share AMP project</name>
+    <name>share-site-creators-share project</name>
     <description>Hides all &quot;create site&quot; links from all users except those belonging to a specific group.</description>
 
     <parent>
@@ -82,6 +82,12 @@
                 <artifactId>yuicompressor-maven-plugin</artifactId>
             </plugin>
         </plugins>
+	      <resources>
+	<resource>
+	  <directory>src/main/amp/config</directory>
+	  <filtering>true</filtering>
+	</resource>
+      </resources>
     </build>
 
 </project>

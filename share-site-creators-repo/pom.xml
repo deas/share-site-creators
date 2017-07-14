@@ -4,9 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.metaversant</groupId>
     <artifactId>share-site-creators-repo</artifactId>
-    <packaging>amp</packaging>
+    <packaging>jar</packaging>
 
-    <name>share-site-creators-repo AMP project</name>
+    <name>share-site-creators-repo project</name>
     <description>Changes the permissions so that only members of a specific group can create sites.</description>
 
     <parent>
@@ -86,8 +86,18 @@
             </exclusions>
         </dependency>
     </dependencies>
+    <build>
+      <resources>
+	<resource>
+	  <directory>src/main/amp/config</directory>
+	  <filtering>true</filtering>
+	</resource>
+      </resources>
+    </build>
     <profiles>
-    	<!-- Enterprise profile, manually activated, automatically adds support for Enterprise edition development (dependencies) -->
+    	<!-- Enterprise profile, manually activated, automatically
+    	     adds support for Enterprise edition development
+    	     (dependencies) -->
         <profile>
             <id>enterprise</id>
             <dependencies>
